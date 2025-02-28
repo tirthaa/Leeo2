@@ -3,6 +3,7 @@ pipeline{
 	stages{
 		stage("Start Grid"){
 			steps{
+				sh "docker kill a705e65058445c9035822374c08de266b9ade92f18d100c1ce60e19242675a1c"
 				sh "docker-compose up -d --remove-orphans"
 				}
 			}
