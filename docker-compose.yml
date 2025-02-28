@@ -17,16 +17,6 @@ services:
       - SE_EVENT_BUS_HOST=selenium-hub5
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
-      
-  chrome1:
-    image: selenium/node-chrome:beta
-    shm_size: 2gb
-    depends_on:
-      - selenium-hub5
-    environment:
-      - SE_EVENT_BUS_HOST=selenium-hub5
-      - SE_EVENT_BUS_PUBLISH_PORT=4442
-      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
   
   real_device:
     image: appium/appium
